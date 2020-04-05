@@ -39,8 +39,8 @@ def index():
             db.session.commit()
             return render_template('index.html', message="Added Task!")
     else:
-        tasks = Todo.query.order_by(Todo.date_created).all()
-        return render_template('index.html', tasks=tasks)
+
+        return render_template('index.html')
 
 
 if __name__ == "__main__":
